@@ -4,8 +4,7 @@
 # [START cloudrun_rails_base_image]
 # Pinning the OS to buster because the nodejs install script is buster-specific.
 # Be sure to update the nodejs install command if the base image OS is updated.
-FROM ruby:3.2
-#FROM ruby:3.2-buster
+FROM ruby:3.2-bookworm
 # [END cloudrun_rails_base_image]
 
 RUN (curl -sS https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | apt-key add -) && \
